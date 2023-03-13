@@ -2,8 +2,6 @@ import SwiftUI
 import PlaygroundSupport
 
 struct ExpandableShape: Shape {
-    let isExpanded: Bool
-    
     var progress: Double
     
     var animatableData: Double {
@@ -208,7 +206,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             ExpandableShape(
-                isExpanded: isFullScreen,
                 progress: isFullScreen ? 1.0 : 0.0
             )
                 .fill(.purple)
